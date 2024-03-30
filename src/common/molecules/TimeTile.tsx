@@ -1,7 +1,7 @@
 import React from 'react';
 import Tile from "../atom/Tile";
 import {formatTime} from "../utils/Utils";
-import GrayText from "../atom/GrayText";
+import GrayText from "../atom/GrayXxsText";
 
 /**
  * 시간과 인덱스 텍스트를 받아 만드는 시간 타일 분자 컴포넌트

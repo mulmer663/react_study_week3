@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {calcTimeLeft} from "../../../common/utils/Utils";
 import Tile from "../../../common/atom/Tile";
 import GrayTile from "../../../common/atom/GrayTile";
-import GrayText from "../../../common/atom/GrayText";
+import GrayText from "../../../common/atom/GrayXxsText";
 import TimeTile from "../../../common/molecules/TimeTile";
 
 /**
