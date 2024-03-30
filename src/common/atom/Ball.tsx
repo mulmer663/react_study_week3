@@ -3,7 +3,7 @@ import clsx from "clsx";
 
 const Ball = ({num}: { num: number }) => {
     return (
-        <div className={clsx('size-9 rounded-full font-jamsil text-white text-base text-center font-bold content-center',
+        <div className={clsx('size-8 rounded-full font-jamsil text-white text-base text-center font-bold content-center',
             {
                 'text-stone-100 bg-stone-100 cursor-pointer hover:bg-stone-300 hover:text-stone-300': num <= 0,
                 'bg-[#f2b526] cursor-default': 1 <= num && num <= 10,
