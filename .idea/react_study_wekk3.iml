@@ -9,5 +9,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="GmarketSans" level="application" />
+    <orderEntry type="library" name="TheJamsil" level="application" />
   </component>
 </module>

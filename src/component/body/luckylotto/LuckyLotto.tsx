@@ -1,5 +1,5 @@
 import React from 'react';
-import Reset from "../../../common/atom/Reset";
+import ResetButton from "../../../common/atom/ResetButton";
 import SixBalls from "../../../common/molecules/SixBalls";
 
 /**
@@ -18,7 +18,7 @@ const LuckyLotto = () => {
                 <p className='text-gray-600 font-noto-sans text-xs'>NUMBER</p>
             </div>
             <SixBalls numbers={numbers}/>
-            <Reset/>
+            <ResetButton/>
         </div>
     );
 };
