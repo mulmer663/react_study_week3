@@ -9,6 +9,9 @@ import PencilSquareSolid from "../../common/svg/PencilSquareSolid";
 import User from "../../common/svg/User";
 import UserSolid from "../../common/svg/UserSolid";
 
+/**
+ * 하단 메뉴 컴포넌트
+ */
 const Footer = () => {
     return (
         <div className='h-24 border-t-2 shadow flex flex-row justify-evenly'>

@@ -16,7 +16,7 @@ const DrawLotto = () => {
         <div className='h-full flex flex-col justify-evenly content-center items-center'>
             <div className='text-gray-600 font-gmarket text-3xl font-bold text-center content-center'>1302회차</div>
             {lottos.map((lotto, index) => (
-                <DrawBalls key={index} index={index} lotto={lotto}/>
+                <DrawBalls key={index} index={index} lottos={lotto}/>
             ))}
             <div className='w-11/12 flex flex-row justify-between'>
                 <Button text={'초기화'}/>
