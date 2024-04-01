@@ -6,7 +6,7 @@ import React from 'react';
  */
 const Tile = ({text}: { text: string }) => {
     return (
-        <div className="bg-white text-orange-400 text-[0.925rem] font-noto-sans font-medium p-1 w-min text-nowrap flex items-center sm:text-lg">
+        <div className="flex w-min items-center bg-white p-1 font-medium text-orange-400 text-[0.925rem] font-noto-sans text-nowrap sm:text-lg">
             {text}
         </div>
     );

@@ -5,7 +5,7 @@ import Footer from "../component/bottom/Footer";
 
 const MainPage = () => {
     return (
-        <div className="max-w-screen-sm container mx-auto h-dvh max-h-dvh flex flex-col justify-between">
+        <div className="container mx-auto flex max-w-screen-sm flex-col justify-between h-dvh max-h-dvh">
             <Header/>
             <Body/>
             <Footer/>

@@ -9,7 +9,7 @@ const TopNav = () => {
     return (
         <div className="flex flex-row justify-around">
             {tabList.map((it, index) =>
-                <div key={index} className="font-gmarket font-bold text-xl sm:text-2xl text-white h-12 content-center hover:border-b-2 border-white cursor-pointer">
+                <div key={index} className="h-12 cursor-pointer content-center border-white text-xl font-bold text-white font-gmarket hover:border-b-2 sm:text-2xl">
                     {it}</div>)}
         </div>
     );

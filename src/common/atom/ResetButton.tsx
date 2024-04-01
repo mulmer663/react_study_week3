@@ -5,7 +5,7 @@ import React from 'react';
  */
 const ResetButton = () => {
     return (
-        <button className='p-1 mr-1 rounded-full font-noto-sans text-gray-600 text-center text-sm content-center bg-gray-100 hover:bg-gray-300 sm:text-base sm:p-2 sm:w-24'>
+        <button className='mr-1 content-center rounded-full bg-gray-100 p-1 text-center text-sm text-gray-600 font-noto-sans hover:bg-gray-300 sm:text-base sm:p-2 sm:w-24'>
             RESET
         </button>
     );

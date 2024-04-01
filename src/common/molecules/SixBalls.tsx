@@ -7,7 +7,7 @@ import Ball from "../atom/Ball";
  */
 const SixBalls = ({numbers}: { numbers: number[] }) => {
     return (
-        <div className='flex flex-row justify-between items-center gap-1 sm:gap-3'>
+        <div className='flex flex-row items-center justify-between gap-1 sm:gap-3'>
             {numbers.map((num, index) =>
                 <Ball key={index} num={num}/>)}
         </div>

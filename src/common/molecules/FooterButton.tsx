@@ -18,7 +18,7 @@ const FooterButton = ({name, logo, activeLogo}: { name: string, logo: ReactNode,
     }
 
     return (
-        <div className='group flex flex-col justify-center items-center' onClick={handleClick}>
+        <div className='flex flex-col items-center justify-center group' onClick={handleClick}>
             {/* 활성화 되면 solid svg 를 넣어줌 */}
             {isActive ? activeLogo : logo}
             <div className={clsx('mt-1.5 font-noto-sans text-xs font-semibold sm:text-sm',

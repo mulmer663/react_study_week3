@@ -24,7 +24,7 @@ const Timer = ({endTime}: { endTime: Date }) => {
     const {days, hours, minutes, seconds} = calcTimeLeft(endTime, currentTime);
 
     return (
-        <div className="h-fit flex flex-row justify-center gap-1">
+        <div className="flex h-fit flex-row justify-center gap-1">
             {/* 시간 아래 글자 때문에 한 번 더 flex 박스 안으로 감싼다.. */}
             <div className="flex flex-col items-center">
                 <Tile text={days.toString()}/>

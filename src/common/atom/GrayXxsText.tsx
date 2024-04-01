@@ -6,7 +6,7 @@ import React from 'react';
  */
 const GrayText = ({text}: { text: string }) => {
     return (
-        <p className="text-[0.5rem] font-semibold font-sans text-gray-400 sm:text-xs">{text}</p>
+        <p className="font-sans font-semibold text-gray-400 text-[0.5rem] sm:text-xs">{text}</p>
     );
 };
 

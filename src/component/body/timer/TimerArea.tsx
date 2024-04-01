@@ -20,11 +20,11 @@ const TimerArea = () => {
     );
 
     return (
-        <div className="h-16 bg-stone-100 flex flex-row items-start">
-                <div className="h-fit basis-5/12 flex justify-center mt-4 sm:mt-2">
+        <div className="flex h-16 flex-row items-start bg-stone-100">
+                <div className="mt-4 flex h-fit basis-5/12 justify-center sm:mt-2">
                     <Tile text={"1302회차 마감 시간"}/>
                 </div>
-            <div className="h-fit basis-7/12 mt-4 sm:mt-2">
+            <div className="mt-4 h-fit basis-7/12 sm:mt-2">
                 <Timer endTime={targetDate}/>
             </div>
         </div>

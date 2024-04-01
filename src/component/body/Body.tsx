@@ -9,7 +9,7 @@ import DrawLotto from "./drawlotto/DrawLotto";
  */
 const Body = () => {
     return (
-        <div className='h-full flex flex-col justify-start'>
+        <div className='flex h-full flex-col justify-start'>
             <TimerArea/>
             <LuckyLotto/>
             <DrawLotto/>

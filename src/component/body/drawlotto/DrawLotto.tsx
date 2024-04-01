@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import SixBalls from "../../../common/molecules/SixBalls";
 import DrawBalls from "../../../common/molecules/DrawBalls";
 import Button from "../../../common/atom/Button";
 
@@ -13,12 +12,12 @@ const DrawLotto = () => {
     const [lottos, setLottos] = useState(initLotto);
 
     return (
-        <div className='h-full flex flex-col justify-evenly content-center items-center'>
-            <div className='text-gray-600 font-gmarket text-3xl font-bold text-center content-center'>1302회차</div>
+        <div className='flex h-full flex-col content-center items-center justify-evenly'>
+            <div className='content-center text-center text-3xl font-bold text-gray-600 font-gmarket'>1302회차</div>
             {lottos.map((lotto, index) => (
                 <DrawBalls key={index} index={index} lottos={lotto}/>
             ))}
-            <div className='w-11/12 flex flex-row justify-between'>
+            <div className='flex w-11/12 flex-row justify-between'>
                 <Button text={'초기화'}/>
                 <Button text={'번호저장'}/>
                 <Button text={'전체생성'}/>

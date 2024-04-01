@@ -6,7 +6,7 @@ import React from 'react';
  */
 const GrayTile = ({text}: { text: string }) => {
     return (
-        <div className="bg-stone-100 text-gray-500 font-noto-sans font-medium p-1 w-min text-nowrap flex items-center">
+        <div className="flex w-min items-center bg-stone-100 p-1 font-medium text-gray-500 font-noto-sans text-nowrap">
             {text}
         </div>
     );

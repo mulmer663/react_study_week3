@@ -14,7 +14,7 @@ import UserSolid from "../../common/svg/UserSolid";
  */
 const Footer = () => {
     return (
-        <div className='h-24 border-t-2 shadow flex flex-row justify-evenly'>
+        <div className='flex h-24 flex-row justify-evenly border-t-2 shadow'>
             <FooterButton name={'번호생성'} logo={<PlusCircle/>} activeLogo={<PlusCircleSolid/>}/>
             <FooterButton name={'번호저장'} logo={<Bookmark/>} activeLogo={<BookmarkSolid/>}/>
             <FooterButton name={'당첨후기'} logo={<PencilSquare/>} activeLogo={<PencilSquareSolid/>}/>
