@@ -7,12 +7,19 @@ import {FaShuffle} from "react-icons/fa6";
  * @param index
  * @param lottos
  */
-const DrawBalls = ({index, lottos}: { index: number, lottos: number[] }) => {
+const DrawBalls = ({index, lotto, handleDrawButtonClick}: {
+    index: number,
+    lotto: number[],
+    handleDrawButtonClick: (index: number) => void
+}) => {
     return (
-        <div key={index} className='flex h-14 w-11/12 flex-row items-center justify-around rounded-full border border-stone-200'>
+        <div key={index}
+             className='flex h-14 w-11/12 flex-row items-center justify-around rounded-full border border-stone-200'>
             <div className='text-3xl font-bold text-gray-500 font-jamsil'>{index + 1}</div>
-            <SixBalls numbers={lottos}/>
-            <FaShuffle size={25} color='#6b7280'/>
+            <SixBalls numbers={lotto}/>
+            <button onClick={() => handleDrawButtonClick(index)}>
+                <FaShuffle size={25} color='#6b7280'/>
+            </button>
         </div>
     );
 };
