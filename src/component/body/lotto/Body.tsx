@@ -38,7 +38,7 @@ const Body = () => {
 
     // 전체 추첨은 그냥 전체 추첨 해줌
     const handleAllDrawClick = () => {
-        setLottos(lottos.map((lotto) => (lotto[0] === 0) ? makeLottoNumber(luckyNumbers) : lotto));
+        setLottos(lottos.map(() => makeLottoNumber(luckyNumbers)));
     }
 
     return (

@@ -12,7 +12,7 @@ const Ball = ({num, index, handleClick}: { num: number, index: number, handleCli
         <div
             className={clsx('content-center rounded-full text-center text-base font-bold size-8 font-jamsil select-none sm:size-10 sm:text-lg',
                 {
-                    'text-stone-100 bg-stone-100 hover:bg-stone-300 hover:text-stone-300': num <= 0,
+                    'text-stone-100 bg-stone-100': num <= 0,
                     'text-white bg-[#f2b526] cursor-default': 1 <= num && num <= 10,
                     'text-white bg-[#3d74ad] cursor-default': 11 <= num && num <= 20,
                     'text-white bg-[#de4c10] cursor-default': 21 <= num && num <= 30,
@@ -20,7 +20,7 @@ const Ball = ({num, index, handleClick}: { num: number, index: number, handleCli
                     'text-white bg-[#2eaa62] cursor-default': 41 <= num
                 },
                 {
-                    'cursor-pointer': handleClick,
+                    'cursor-pointer hover:bg-stone-300 hover:text-stone-300': handleClick,
                     'cursor-default': !handleClick
                 })}
             onClick={() => handleClick ? handleClick(index) : null}
