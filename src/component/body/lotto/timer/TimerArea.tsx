@@ -1,8 +1,8 @@
 import React from 'react';
-import Tile from "../../../common/atom/Tile";
+import Tile from "../../../../common/atom/Tile";
 import Timer from "./Timer";
-import {getTargetDate} from "../../../common/utils/Utils";
-import HiddenTile from "../../../common/atom/HiddenTile";
+import {getTargetDate} from "../../../../common/utils/Utils";
+import HiddenTile from "../../../../common/atom/HiddenTile";
 
 /**
  * 타이머 전체 영역 컴포넌트

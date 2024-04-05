@@ -22,13 +22,13 @@ const Footer = () => {
 
     return (
         <div className='flex h-24 flex-row justify-evenly border-t-2 shadow'>
-            <FooterButton name={'번호생성'} logo={<PlusCircle/>} activeLogo={<PlusCircleSolid/>} index={0} handleClick={handleClick}
+            <FooterButton link={"/"} name={'번호생성'} logo={<PlusCircle/>} activeLogo={<PlusCircleSolid/>} index={0} handleClick={handleClick}
                           isActive={buttonArr[0]}/>
-            <FooterButton name={'번호저장'} logo={<Bookmark/>} activeLogo={<BookmarkSolid/>} index={1} handleClick={handleClick}
+            <FooterButton link={"/save"} name={'번호저장'} logo={<Bookmark/>} activeLogo={<BookmarkSolid/>} index={1} handleClick={handleClick}
                           isActive={buttonArr[1]}/>
-            <FooterButton name={'당첨후기'} logo={<PencilSquare/>} activeLogo={<PencilSquareSolid/>} index={2} handleClick={handleClick}
+            <FooterButton link={"/review"} name={'당첨후기'} logo={<PencilSquare/>} activeLogo={<PencilSquareSolid/>} index={2} handleClick={handleClick}
                           isActive={buttonArr[2]}/>
-            <FooterButton name={'마이페이지'} logo={<User/>} activeLogo={<UserSolid/>} index={3} handleClick={handleClick}
+            <FooterButton link={"/mypage"} name={'마이페이지'} logo={<User/>} activeLogo={<UserSolid/>} index={3} handleClick={handleClick}
                           isActive={buttonArr[3]}/>
         </div>
     );

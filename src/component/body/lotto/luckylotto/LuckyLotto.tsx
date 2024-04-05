@@ -1,6 +1,6 @@
 import React from 'react';
-import ResetButton from "../../../common/atom/ResetButton";
-import SixBalls from "../../../common/molecules/SixBalls";
+import ResetButton from "../../../../common/atom/ResetButton";
+import SixBalls from "../../../../common/molecules/SixBalls";
 
 /**
  * 럭키 번호 추첨 컴포넌트

@@ -1,7 +1,6 @@
-import React, {ReactNode, useState} from 'react';
+import React, {ReactNode} from 'react';
 import clsx from "clsx";
-import logo from "../../component/header/Logo";
-import button from "../atom/Button";
+import {Link} from "react-router-dom";
 
 /**
  * 이름, 비활성화 상태 svg, 활성화 상태 svg 3개를 받아
@@ -10,9 +9,11 @@ import button from "../atom/Button";
  * @param isActive
  * @param logo
  * @param activeLogo
+ * @param index
  * @param handleClick
  */
-const FooterButton = ({name, isActive, logo, activeLogo, index, handleClick}: {
+const FooterButton = ({link, name, isActive, logo, activeLogo, index, handleClick}: {
+    link: string,
     name: string,
     isActive: boolean,
     logo: ReactNode,
@@ -22,7 +23,7 @@ const FooterButton = ({name, isActive, logo, activeLogo, index, handleClick}: {
 }) => {
 
     return (
-        <button className='flex flex-col items-center justify-center group' onClick={() => handleClick(index)}>
+        <Link to={link} className='flex flex-col items-center justify-center group' onClick={() => handleClick(index)}>
             {/* 활성화 되면 solid svg 를 넣어줌 */}
             {isActive ? activeLogo : logo}
             <div className={clsx('mt-1.5 font-noto-sans text-xs font-semibold sm:text-sm',
@@ -31,7 +32,7 @@ const FooterButton = ({name, isActive, logo, activeLogo, index, handleClick}: {
                     'text-gray-600': !isActive
                 }
             )}>{name}</div>
-        </button>
+        </Link>
     );
 };
 

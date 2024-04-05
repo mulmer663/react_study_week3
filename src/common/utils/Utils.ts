@@ -1,5 +1,4 @@
 import random from 'random'
-import luckyLotto from "../../component/body/luckylotto/LuckyLotto";
 
 /**
  * 목표시간과 현재시간의 차이를 일, 시간, 분, 초로 반환하는 함수
@@ -78,6 +77,35 @@ export const makeLuckyNumber = (numbers: number[], index: number) => {
 }
 
 export const makeLottoNumber = (luckyLotto: number[]) => {
-    const lotto = [0, 0, 0, 0, 0, 0];
-    return lotto;
+    const result: number[] = luckyLotto.filter(it => it > 0);
+    const usedNumbers: Set<number> = new Set();
+    result.map(it => usedNumbers.add(it));
+
+    while (result.length < 6) {
+        const randomNumber = random.int(1, 45);
+        if (!usedNumbers.has(randomNumber)) {
+            result.push(randomNumber);
+            usedNumbers.add(randomNumber);
+        }
+    }
+
+    return result.sort((a, b) => {
+        return a - b;
+    });
+}
+
+/**
+ * 경고를 띄우는 함수
+ */
+export const popupDangerAlert = () => {
+    const alertBox = document.getElementById('dangerAlert');
+    if (!alertBox) return;
+    alertBox.classList.remove('opacity-0');
+    alertBox.classList.add('opacity-100');
+
+    // 3초 후 알람 숨기기
+    setTimeout(function () {
+        alertBox.classList.remove('opacity-100');
+        alertBox.classList.add('opacity-0');
+    }, 2000);
 }

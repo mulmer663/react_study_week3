@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import TimerArea from "./timer/TimerArea";
 import LuckyLotto from "./luckylotto/LuckyLotto";
 import DrawLotto from "./drawlotto/DrawLotto";
-import {makeLottoNumber, makeLuckyNumber} from "../../common/utils/Utils";
+import {makeLottoNumber, makeLuckyNumber} from "../../../common/utils/Utils";
 
 const initLotto: number[][] = [[0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]];
@@ -21,8 +21,8 @@ const Body = () => {
         setLuckyNumbers(luckyNumbers.map((num, i) => (i === index) ? num = makeLuckyNumber(luckyNumbers, index) : num));
     };
 
-    // 리셋 클릭이벤트 : 리셋버튼 클릭시 럭키 추첨 상태를 초기화
-    const handleReset = () => {
+    // 럭키 리셋 클릭이벤트 : 리셋버튼 클릭시 럭키 추첨 상태를 초기화
+    const handleLuckyReset = () => {
         setLuckyNumbers([0, 0, 0, 0, 0, 0]);
     };
 
@@ -31,11 +31,21 @@ const Body = () => {
         setLottos(lottos.map((lotto, i) => (i === index) ? makeLottoNumber(luckyNumbers) : lotto));
     };
 
+    // 로또 추첨 초기화 버튼 클릭하면 리셋
+    const handleInitClick = () => {
+        setLottos(initLotto);
+    }
+
+    // 전체 추첨은 그냥 전체 추첨 해줌
+    const handleAllDrawClick = () => {
+        setLottos(lottos.map((lotto) => (lotto[0] === 0) ? makeLottoNumber(luckyNumbers) : lotto));
+    }
+
     return (
         <div className='flex h-full flex-col justify-start'>
             <TimerArea/>
-            <LuckyLotto luckyNumbers={luckyNumbers} handleBallClick={handleBallClick} handleReset={handleReset}/>
-            <DrawLotto lottos={lottos} handleDrawButtonClick={handleDrawButtonClick}/>
+            <LuckyLotto luckyNumbers={luckyNumbers} handleBallClick={handleBallClick} handleReset={handleLuckyReset}/>
+            <DrawLotto lottos={lottos} handleDrawButtonClick={handleDrawButtonClick} handleInitClick={handleInitClick} handleAllDrawClick={handleAllDrawClick}/>
         </div>
     );
 };

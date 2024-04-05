@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {calcTimeLeft} from "../../../common/utils/Utils";
-import Tile from "../../../common/atom/Tile";
-import GrayTile from "../../../common/atom/GrayTile";
-import GrayText from "../../../common/atom/GrayXxsText";
-import TimeTile from "../../../common/molecules/TimeTile";
+import {calcTimeLeft} from "../../../../common/utils/Utils";
+import Tile from "../../../../common/atom/Tile";
+import GrayTile from "../../../../common/atom/GrayTile";
+import GrayText from "../../../../common/atom/GrayXxsText";
+import TimeTile from "../../../../common/molecules/TimeTile";
 
 /**
  * 핵심 타이머 컴포넌트 목표 시간을 받아 현재 시간과의 차이로 타이머 컴포넌트들을 쭉 랜더함
