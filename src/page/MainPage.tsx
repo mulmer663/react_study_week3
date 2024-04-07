@@ -10,7 +10,7 @@ import NotFound from "../router/NotFound";
  */
 const MainPage = () => {
     return (
-        <div className="container mx-auto flex max-w-screen-sm flex-col justify-between bg-white h-dvh">
+        <div className="container mx-auto flex max-w-screen-sm flex-col justify-between bg-white min-h-[680px] h-svh">
             <BrowserRouter>
                 <Routes>
                     {/* 번호 생성 */}
