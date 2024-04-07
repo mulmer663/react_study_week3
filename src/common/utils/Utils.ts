@@ -2,8 +2,8 @@ import random from 'random'
 
 /**
  * 목표시간과 현재시간의 차이를 일, 시간, 분, 초로 반환하는 함수
- * @param endTime
- * @param currentTime
+ * @param endTime 목표 시간
+ * @param currentTime 현새 시간
  */
 export const calcTimeLeft = (endTime: Date, currentTime: Date) => {
     const timeLeft = endTime.getTime() - currentTime.getTime();
@@ -23,14 +23,20 @@ export const calcTimeLeft = (endTime: Date, currentTime: Date) => {
 
 
 /**
- * 숫자 시간을 00 포멧 문자열로 바꾸는 함수 (7 -> "07")
- * @param time
+ * 숫자 시간을 00 포멧 문자열로 바꾸는 함수
+ * <br>
+ * (7 -> "07")
+ * @param time 단일 숫자인 시간
  */
 export const formatTime = (time: number) => {
     // 숫자를 두 자리 문자열로 변환하여 반환
     return time.toString().padStart(2, '0');
 }
 
+/**
+ * 항상 다음 토요일 오후 8시를 출력하는 함수
+ * @param currentDate
+ */
 export const getTargetDate = (currentDate: Date) => {
     let targetDate;
 
@@ -52,7 +58,9 @@ export const getTargetDate = (currentDate: Date) => {
 }
 
 /**
- * 로또 배열을 받아 겹치지 않는 하나의 랜덤 한 수를 반환 시켜주는 함수
+ * <p>로또 배열을 받아 </p>
+ * <p>특정 인덱스의 수가 0이면 겹치지 않는 하나의 랜덤 한 수를 반환시키는 함수</p>
+ * <p>만약 0보다 큰 수면 0으로 반환 시켜준다.</p>
  * @param numbers 로또 배열
  * @param index 인덱스
  */
@@ -76,6 +84,11 @@ export const makeLuckyNumber = (numbers: number[], index: number) => {
     }
 }
 
+/**
+ * 추첨 로또 배열을 받아 겹치치 않게 로또를 추첨하는 함수
+ * 마지막엔 정렬해서 준다.
+ * @param luckyLotto 추첨 로또 배열
+ */
 export const makeLottoNumber = (luckyLotto: number[]) => {
     const result: number[] = luckyLotto.filter(it => it > 0);
     const usedNumbers: Set<number> = new Set();

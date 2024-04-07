@@ -3,8 +3,8 @@ import Ball from "../atom/Ball";
 
 /**
  * number[] 를 받아 로또 일련 모양을 만드는 컴포넌트
- * @param numbers
- * @param handleClick Optional한 클릭이벤트 핸들러
+ * @param numbers 로또 번호가 들어있는 숫자 배열
+ * @param handleClick Optional 한 Ball 클릭 이벤트 핸들러
  */
 const SixBalls = ({numbers, handleBallClick}: { numbers: number[], handleBallClick?: (index: number) => void}) => {
     return (

@@ -1,5 +1,8 @@
 import React from 'react';
 
+/**
+ * Footer 에 쓰이는 Svg
+ */
 const BookmarkSolid = () => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6 fill-orange-500 start-2">

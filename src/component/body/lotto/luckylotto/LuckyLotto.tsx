@@ -3,7 +3,10 @@ import ResetButton from "../../../../common/atom/ResetButton";
 import SixBalls from "../../../../common/molecules/SixBalls";
 
 /**
- * 럭키 번호 추첨 컴포넌트
+ * 럭키 추천 번호를 만들어주는 컴포넌트
+ * @param numbers 로또 번호가 들어있는 숫자 배열
+ * @param handleBallClick 공 클릭 콜백 이벤트
+ * @param handleReset 리셋 버튼 클릭 시 이벤트
  */
 const LuckyLotto = ({luckyNumbers: numbers, handleBallClick, handleReset}: {
     luckyNumbers: number[],

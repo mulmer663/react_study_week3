@@ -4,6 +4,10 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import MakeLotto from "../router/lotto/MakeLotto";
 import NotFound from "../router/NotFound";
 
+/**
+ * 라우터로 감싼 메인 페이지
+ * 하단의 버튼으로 경로가 변하는 형식
+ */
 const MainPage = () => {
     return (
         <div className="container mx-auto flex max-w-screen-sm flex-col justify-between h-dvh max-h-dvh">

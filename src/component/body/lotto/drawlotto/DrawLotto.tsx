@@ -5,7 +5,11 @@ import DangerAlert from "../../../../common/atom/DangerAlert";
 import {popupDangerAlert} from "../../../../common/utils/Utils";
 
 /**
- * 로또 추첨 번호를 뽑는 컴포넌트
+ * 로또 추첨을 하는 컴포넌트
+ * @param lottos 로도 번호들이 들어있는 숫자 이차 배열
+ * @param handleDrawButtonClick 물결 버튼 클릭 시 발생하는 이벤트
+ * @param handleInitClick 초기화 버튼 클릭시 발생하는 이벤트
+ * @param handleAllDrawClick 전체생성 버튼 클릭시 발생하는 이벤트
  */
 const DrawLotto = ({lottos, handleDrawButtonClick, handleInitClick, handleAllDrawClick}: {
     lottos: number[][],

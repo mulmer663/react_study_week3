@@ -2,6 +2,9 @@ import React from 'react';
 import Header from "../../component/header/lotto/Header";
 import Body from "../../component/body/lotto/Body";
 
+/**
+ * 번호 생성 페이지 라우터
+ */
 const MakeLotto = () => {
     return (
         <div className="flex h-full flex-col justify-between">

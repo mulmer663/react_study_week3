@@ -6,8 +6,10 @@ import GrayText from "../../../../common/atom/GrayXxsText";
 import TimeTile from "../../../../common/molecules/TimeTile";
 
 /**
- * 핵심 타이머 컴포넌트 목표 시간을 받아 현재 시간과의 차이로 타이머 컴포넌트들을 쭉 랜더함
- * @param endTime
+ * 핵심 타이머 컴포넌트
+ * <br>
+ * 목표 시간을 받아 현재 시간과의 차이로 타이머 컴포넌트들을 쭉 랜더함
+ * @param endTime 목ㅍ 시간 (매주 토요일 오후 8시)
  */
 const Timer = ({endTime}: { endTime: Date }) => {
     const [currentTime, setCurrentTime] = useState(new Date());
@@ -21,6 +23,7 @@ const Timer = ({endTime}: { endTime: Date }) => {
         return () => clearInterval(intervalId);
     }, []); // 빈 배열을 전달하여 컴포넌트가 mount될 때 한 번만 실행
 
+    // 남은 시간 계산
     const {days, hours, minutes, seconds} = calcTimeLeft(endTime, currentTime);
 
     return (

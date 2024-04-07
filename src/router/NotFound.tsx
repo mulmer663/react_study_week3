@@ -1,5 +1,8 @@
 import React from 'react';
 
+/**
+ * 페이지 없을 때 나오는 404 에러페이지
+ */
 const NotFound = () => {
     return (
         <div className="flex min-h-screen flex-grow items-center justify-center bg-gray-50">
