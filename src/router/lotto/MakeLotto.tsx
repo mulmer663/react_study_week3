@@ -7,7 +7,7 @@ import Body from "../../component/body/lotto/Body";
  */
 const MakeLotto = () => {
     return (
-        <div className="flex grow h-full max-h-[720px] flex-col justify-between">
+        <div className="flex h-full grow flex-col justify-between max-h-[720px]">
             <Header/>
             <Body/>
         </div>

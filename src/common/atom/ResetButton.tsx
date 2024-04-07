@@ -6,7 +6,9 @@ import React from 'react';
 const ResetButton = ({handleClick}: { handleClick: () => void }) => {
     return (
         <button
-            className='mr-1 content-center rounded-full bg-gray-100 p-1 text-center text-sm text-gray-600 font-noto-sans hover:bg-gray-300 sm:text-base sm:p-2 sm:w-24'
+            className='mr-1 w-1/5 content-center rounded-full bg-gray-100 p-1 text-center text-sm
+            text-gray-600 font-noto-sans pointHover:hover:bg-gray-300 sm:text-base sm:p-2 sm:w-24
+            active:scale-105 transition'
             onClick={handleClick}>
             RESET
         </button>

@@ -23,8 +23,8 @@ const Ball = ({num, index, handleClick}: { num: number, index: number, handleCli
                 },
                 /* handleClink 존재시 클릭 할 수 있게 변경하고 hover 이펙트도 추가함 */
                 {
-                    'cursor-pointer hover:bg-stone-300 hover:text-stone-300': handleClick,
-                    'cursor-default': !handleClick
+                    'cursor-pointer active:scale-110 transition': handleClick,
+                    'cursor-default transition': !handleClick
                 })}
             onClick={() => handleClick ? handleClick(index) : null}
         >{num}

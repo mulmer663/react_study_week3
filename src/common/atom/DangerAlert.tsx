@@ -6,7 +6,7 @@ import React from 'react';
 const DangerAlert = () => {
     return (
         <div id='dangerAlert'
-            className="absolute top-1/3 z-10 mb-4 flex items-center rounded-lg border border-red-300 bg-red-50 p-4 text-sm text-red-800 opacity-0 transition-opacity duration-500"
+            className="absolute top-1/3 mb-4 hidden items-center rounded-lg border border-red-300 bg-red-50 p-4 text-sm text-red-800 opacity-0 transition-opacity duration-500"
             role="alert">
             <svg className="inline h-4 w-4 flex-shrink-0 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                  fill="currentColor" viewBox="0 0 20 20">

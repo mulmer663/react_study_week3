@@ -113,12 +113,24 @@ export const makeLottoNumber = (luckyLotto: number[]) => {
 export const popupDangerAlert = () => {
     const alertBox = document.getElementById('dangerAlert');
     if (!alertBox) return;
-    alertBox.classList.remove('opacity-0');
-    alertBox.classList.add('opacity-100');
+    // hidden을 flex로
+    alertBox.classList.remove('hidden');
+    alertBox.classList.add('flex');
+    // 0.05초 후 알람 숨기기
+    setTimeout(function () {
+        alertBox.classList.remove('opacity-0');
+        alertBox.classList.add('opacity-100');
+    }, 50);
 
-    // 3초 후 알람 숨기기
+    // 2초 후 알람 숨기기
     setTimeout(function () {
         alertBox.classList.remove('opacity-100');
         alertBox.classList.add('opacity-0');
     }, 2000);
+
+    // 2.4초 후 hidden으로 변경
+    setTimeout(function () {
+        alertBox.classList.remove('flex');
+        alertBox.classList.add('hidden');
+    }, 2400);
 }

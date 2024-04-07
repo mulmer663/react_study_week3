@@ -28,7 +28,7 @@ const FooterButton = ({link, name, isActive, logo, activeLogo, index, handleClic
             {/* 활성화 되면 solid svg 를 넣어줌 */}
             {isActive ? activeLogo : logo}
             {/* 동적으로 글자 색 변경 */}
-            <div className={clsx('mt-1.5 font-noto-sans text-xs font-semibold sm:text-sm',
+            <div className={clsx('mt-1.5 font-noto-sans text-xs font-semibold sm:text-sm transition',
                 {
                     'text-orange-500': isActive,
                     'text-gray-600': !isActive
