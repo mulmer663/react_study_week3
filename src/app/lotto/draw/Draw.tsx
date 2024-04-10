@@ -1,16 +1,16 @@
 import React, {useState} from 'react';
-import TimerArea from "./timer/TimerArea";
-import LuckyLotto from "./luckylotto/LuckyLotto";
-import DrawLotto from "./drawlotto/DrawLotto";
+import TimerArea from "../../../component/body/lotto/timer/TimerArea";
+import LuckyLotto from "../../../component/body/lotto/luckylotto/LuckyLotto";
+import DrawLotto from "../../../component/body/lotto/drawlotto/DrawLotto";
 import {makeLottoNumber, makeLuckyNumber} from "../../../common/utils/Utils";
 
 const initLotto: number[][] = [[0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]];
 /**
- * 몸톰 컴포넌트
+ * 번호 추첨 페이지
  * 일단 타이머, 럭키 숫자뽑기, 로또만들기 3개를 가지고 있다
  */
-const Body = () => {
+const Draw = () => {
     // LuckyLotto가 쓰는 상태 컴포넌트
     const [luckyNumbers, setLuckyNumbers] = useState([0, 0, 0, 0, 0, 0]);
     // DrawLotto가 쓰는 2D 로또 배열 컴포넌트
@@ -50,4 +50,4 @@ const Body = () => {
     );
 };
 
-export default Body;
+export default Draw;
