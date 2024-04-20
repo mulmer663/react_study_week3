@@ -11,7 +11,9 @@ const root = ReactDOM.createRoot(
 root.render(
     <React.StrictMode>
         <BrowserRouter>
-            <App/>
+            <div className="bg-[#e5e8eb]">
+                <App/>
+            </div>
         </BrowserRouter>
     </React.StrictMode>
 );

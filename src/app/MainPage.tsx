@@ -1,8 +1,8 @@
 import React from 'react';
 import Footer from "../component/bottom/Footer";
 import {Navigate, Route, Routes} from "react-router-dom";
-import MakeLotto from "./lotto/MakeLotto";
-import NotFound from "./NotFound";
+import Lotto from "./lotto/Lotto";
+import NotFound from "./error/NotFound";
 
 /**
  * 라우터로 감싼 메인 페이지
@@ -14,7 +14,7 @@ const MainPage = () => {
             <Routes>
                 <Route path="/" element={<Navigate replace to="/lotto/draw" />}/>
                 {/* 번호 생성 */}
-                <Route path="/lotto/*" element={<MakeLotto/>}/>
+                <Route path="/lotto/*" element={<Lotto/>}/>
                 {/* 번호 저장 */}
                 <Route path="/save/*" element={<NotFound/>}/>
                 {/* 당첨 후기 */}
