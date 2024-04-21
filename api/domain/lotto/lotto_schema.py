@@ -17,3 +17,8 @@ class Lotto(BaseModel):
     draw_number5: int
     draw_number6: int
     bonus_number: int
+
+
+class LottoStatCount(BaseModel):
+    number: int
+    count: int
