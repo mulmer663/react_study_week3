@@ -5,7 +5,7 @@ const Search = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const res = await fetch("http://127.0.0.1:8000/hello");
+            const res = await fetch("http://127.0.0.1:8000/");
             return res.json();
         }
 

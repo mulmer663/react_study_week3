@@ -15,6 +15,10 @@ module.exports = {
                 'noto-sans': ['"Noto Sans KR"', 'ui-sans-serif', 'system-ui'],
                 'gmarket': ['GmarketSans', 'monospace'],
             },
+            height: {
+                '100': '25rem',
+                '120' : '30rem',
+            }
         },
     },
     plugins: [],

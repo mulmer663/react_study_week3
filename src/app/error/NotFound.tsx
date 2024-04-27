@@ -6,7 +6,7 @@ import {Link} from "react-router-dom";
  */
 const NotFound = () => {
     return (
-        <div className="flex h-fit grow items-center justify-center bg-gray-50">
+        <div className="flex h-full grow items-center justify-center bg-gray-50">
             <div className="rounded-lg bg-white p-8 text-center shadow-xl">
                 <h1 className="mb-4 text-4xl font-bold font-gmarket">404</h1>
                 <p className="text-gray-600 font-noto-sans">Oops! The page you are looking for could not be found.</p>

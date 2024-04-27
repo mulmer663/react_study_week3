@@ -4,6 +4,7 @@ import {Route, Routes} from "react-router-dom";
 import NotFound from "../error/NotFound";
 import Draw from "./draw/Draw";
 import Search from "./search/Search";
+import StatWrapper from "./stat/StatWrapper";
 
 /**
  * 번호 생성 페이지
@@ -11,12 +12,12 @@ import Search from "./search/Search";
  */
 const Lotto = () => {
     return (
-        <div className="flex h-full grow flex-col justify-between max-h-[720px]">
+        <div className="flex h-full grow flex-col justify-start">
             <Header/>
             <Routes>
                 <Route path="/draw" element={<Draw/>}/>
                 <Route path="/search" element={<Search/>}/>
-                <Route path="/stat" element={<NotFound/>}/>
+                <Route path="/stat/*" element={<StatWrapper/>}/>
             </Routes>
         </div>
     );

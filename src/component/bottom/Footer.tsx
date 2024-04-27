@@ -23,7 +23,7 @@ const Footer = () => {
     }
 
     return (
-        <div className='flex h-24 flex-row justify-evenly border-t-2 shadow'>
+        <div className='flex h-20 flex-row justify-evenly border-t-2 shadow min-h-20'>
             <FooterButton link={"/"} name={'번호생성'} logo={<PlusCircle/>} activeLogo={<PlusCircleSolid/>} index={0} handleClick={handleClick}
                           isActive={activeArr[0]}/>
             <FooterButton link={"/save"} name={'번호저장'} logo={<Bookmark/>} activeLogo={<BookmarkSolid/>} index={1} handleClick={handleClick}

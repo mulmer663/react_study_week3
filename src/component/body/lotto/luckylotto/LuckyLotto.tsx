@@ -20,7 +20,7 @@ const LuckyLotto = ({luckyNumbers: numbers, handleBallClick, handleReset}: {
                 <div className='h-1/2 bg-orange-500 w-[3px] sm:w-2'></div>
                 <div className='h-1/2 bg-gray-200 w-[3px] sm:w-2'></div>
             </div>
-            <div className='hover:cursor-grab active:cursor-grabbing sm:flex'>
+            <div className='hover:cursor-pointer active:cursor-grabbing sm:flex'>
                 <p className='text-xs font-semibold text-gray-600 font-noto-sans sm:pr-2 sm:text-base'>LUCKY</p>
                 <p className='text-xs text-gray-600 font-noto-sans sm:text-base'>NUMBER</p>
             </div>

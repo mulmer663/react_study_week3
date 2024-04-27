@@ -42,7 +42,7 @@ const Draw = () => {
     }
 
     return (
-        <div className='flex h-full flex-col justify-start'>
+        <div className='flex h-full flex-col justify-start max-h-[720px]'>
             <TimerArea/>
             <LuckyLotto luckyNumbers={luckyNumbers} handleBallClick={handleBallClick} handleReset={handleLuckyReset}/>
             <DrawLotto lottos={lottos} handleDrawButtonClick={handleDrawButtonClick} handleInitClick={handleInitClick} handleAllDrawClick={handleAllDrawClick}/>

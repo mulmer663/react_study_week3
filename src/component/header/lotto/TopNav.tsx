@@ -16,7 +16,7 @@ const TopNav = () => {
             <Link to={"/lotto/search"}
                   className="h-12 cursor-pointer content-center border-white text-xl font-bold text-white font-gmarket hover:border-b-2 sm:text-2xl">
                 회차검색</Link>
-            <Link to={"/lotto/stat"}
+            <Link to={"/lotto/stat/number"}
                   className="h-12 cursor-pointer content-center border-white text-xl font-bold text-white font-gmarket hover:border-b-2 sm:text-2xl">
                 번호통계</Link>
         </div>
