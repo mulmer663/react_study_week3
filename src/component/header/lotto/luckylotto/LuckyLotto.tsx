@@ -15,7 +15,7 @@ const LuckyLotto = ({luckyNumbers: numbers, handleBallClick, handleReset}: {
 }) => {
 
     return (
-        <div className="flex h-16 flex-row items-center justify-between">
+        <div className="flex h-16 flex-row items-center justify-between border-b-4">
             <div className="ml-1 flex h-5/6 flex-col justify-around gap-1.5 hover:cursor-grab active:cursor-grabbing">
                 <div className='h-1/2 bg-orange-500 w-[3px] sm:w-2'></div>
                 <div className='h-1/2 bg-gray-200 w-[3px] sm:w-2'></div>

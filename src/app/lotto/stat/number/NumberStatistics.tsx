@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import BarChart from "../../../../component/body/chart/BarChart";
+import clsx from "clsx";
 
 export type dataFormat = {
     number: number
@@ -10,8 +11,8 @@ const initData: dataFormat[] = [];
 
 const NumberStatistics = () => {
     const [data, setData] = useState(initData);
-    const [minItem, setMinItem] = useState({number: 0, count: 0});
-    const [maxItem, setMaxItem] = useState({number: 0, count: 0});
+    const [isNumber, setIsNumber] = useState(true);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -23,29 +24,22 @@ const NumberStatistics = () => {
             .then(res => {
                 res.sort((a: { number: number; }, b: { number: number; }) => b.number - a.number);
                 setData(res);
-
-                // 최대 및 최소 당첨 번호 계산
-                if (res.length > 0) {
-                    const maxItem = res.reduce((prev: dataFormat, current: dataFormat) => (prev.count > current.count) ? prev : current);
-                    const minItem = res.reduce((prev: dataFormat, current: dataFormat) => (prev.count < current.count) ? prev : current);
-
-                    setMaxItem(maxItem);
-                    setMinItem(minItem);
-                }
+                setIsLoading(false);
             })
             .catch(err => console.log(err));
     }, []);
 
-    const handleSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        const sortType = e.target.value;
+    const handleSortChange = (str: string) => {
         const sortedData = [...data]; // 데이터 복사본 생성
 
-        if (sortType === "countMax") {
+        if (str === "count") {
             // 당첨수 최대 번호순으로 정렬
             sortedData.sort((a, b) => a.count - b.count);
+            setIsNumber(false);
         } else {
             // 번호순으로 정렬
             sortedData.sort((a, b) => b.number - a.number);
+            setIsNumber(true);
         }
 
         setData(sortedData); // 정렬된 데이터로 상태 업데이트
@@ -53,21 +47,32 @@ const NumberStatistics = () => {
 
     return (
         <div className='flex h-full flex-col justify-start'>
-            <div className='flex h-20 flex-row items-center justify-evenly'>
-                <div className='rounded border-2 border-gray-100 bg-gray-100 px-4 py-1 text-center text-xs font-nato-sans sm:text-base sm:px-8'>
-                    최대 당첨: {maxItem.number}번 ({maxItem.count}회)
+            <div className='flex h-10 w-10/12 flex-row items-center justify-end gap-4 place-self-center'>
+                <div onClick={() => handleSortChange('number')}
+                     className={clsx("cursor-pointer text-center border-2 w-16 h-6 px-0.5 nato-sans text-sm", {
+                         'text-gray-600': !isNumber,
+                         'text-orange-400': isNumber
+                     })}>번호순
                 </div>
-                <div className='rounded border-2 border-gray-100 bg-gray-100 px-4 py-1 text-center text-xs font-nato-sans sm:text-base sm:px-8'>
-                    최소 당첨: {minItem.number}번 ({minItem.count}회)
+                <div onClick={() => handleSortChange('count')}
+                     className={clsx("cursor-pointer text-center border-2 w-16 h-6 px-0.5 nato-sans text-sm", {
+                         'text-gray-600': isNumber,
+                         'text-orange-400': !isNumber
+                     })}>당첨순
                 </div>
-                <select className='rounded border-2 border-gray-100 bg-gray-100 px-2 py-1 text-xs font-nato-sans sm:text-base sm:px-4' name="sort" id="sort" onChange={handleSortChange}>
-                    <option value="number">번호 순</option>
-                    <option value="countMax">당첨 순</option>
-                </select>
             </div>
-            <div className='h-96 grow overflow-y-auto'>
-                <BarChart data={data}/>
-            </div>
+            {
+                isLoading ?
+                    <div className='h-80 grow overflow-y-auto sm:h-96 flex flex-row items-center justify-center'>
+                        <div
+                            className='h-20 w-40 px-4 py-1 animate-pulse border-4 rounded-lg text-lg font-semibold text-gray-300 nato-sans'>
+                            Now Loading...
+                        </div>
+                    </div>
+                    : <div className='h-80 grow overflow-y-auto sm:h-96 flex flex-row items-center justify-center'>
+                        <BarChart data={data}/>
+                    </div>
+            }
         </div>
     );
 };

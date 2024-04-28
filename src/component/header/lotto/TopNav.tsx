@@ -9,7 +9,7 @@ import {Link} from "react-router-dom";
 const TopNav = () => {
 
     return (
-        <div className="flex flex-row justify-around">
+        <div className="flex flex-row justify-around bg-gradient-to-r from-orange-500 to-orange-300">
             <Link to={"/lotto/draw"}
                   className="h-12 cursor-pointer content-center border-white text-xl font-bold text-white font-gmarket hover:border-b-2 sm:text-2xl">
                 번호생성</Link>

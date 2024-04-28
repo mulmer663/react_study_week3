@@ -1,15 +1,23 @@
 import React from 'react';
 import Logo from "./Logo";
 import TopNav from "./TopNav";
+import TimerArea from "./timer/TimerArea";
+import LuckyLotto from "./luckylotto/LuckyLotto";
 
 /**
  *  번호생성 해더 부분
  */
-const Header = () => {
+const Header = ({savedNumbers, handleLuckyClick, handleLuckyReset}: {
+    savedNumbers: number[],
+    handleLuckyClick: (index: number) => void,
+    handleLuckyReset: () => void
+}) => {
     return (
-        <div className="bg-gradient-to-r from-orange-500 to-orange-300">
+        <div>
             <Logo/>
             <TopNav/>
+            <TimerArea/>
+            <LuckyLotto luckyNumbers={savedNumbers} handleBallClick={handleLuckyClick} handleReset={handleLuckyReset}/>
         </div>
     );
 };

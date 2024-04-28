@@ -5,7 +5,7 @@ import React from 'react';
  */
 const Logo = () => {
     return (
-        <div>
+        <div className="bg-gradient-to-r from-orange-500 to-orange-300">
             <svg className="ml-2 pt-1 size-10" version="1.0" xmlns="http://www.w3.org/2000/svg"
                  width="1280.000000pt" height="1280.000000pt" viewBox="0 0 1280.000000 1280.000000"
                  preserveAspectRatio="xMidYMid meet">
